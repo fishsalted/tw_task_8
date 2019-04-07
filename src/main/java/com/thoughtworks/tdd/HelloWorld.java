@@ -6,7 +6,20 @@ package com.thoughtworks.tdd;
 public class HelloWorld {
 
     public static String fizzBuzz(int number) {
-        //todo
+        String result = "";
+        if(number % 3 == 0) {
+            result = "Fizz";
+        }
+        if(number % 5 == 0) {
+            result += "Buzz";
+        }
+        if(number % 7 == 0) {
+            result += "Whizz";
+        }
+        if(result.isEmpty()) {
+            return String.valueOf(number);
+        }
+        return result;
     }
 
     public static void main(String[] args) {
